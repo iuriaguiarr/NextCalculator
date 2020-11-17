@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import Particles from "react-particles-js";
 
 // Interagindo diretamente com a tag body
 export const GlobalStyle = createGlobalStyle`

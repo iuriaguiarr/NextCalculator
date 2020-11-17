@@ -1,6 +1,5 @@
 import * as Component from "./styles";
 import { useState } from "react";
-import Particles from "react-particles-js";
 
 export default function index() {
   const [result, setResult] = useState("");
