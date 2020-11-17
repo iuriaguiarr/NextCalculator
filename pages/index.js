@@ -1,178 +1,188 @@
-import * as Component from "./styles";
+import CalculatorBox from "../components/CalculatorBox";
+import CalculatorButton from "../components/CalculatorButton";
+import CalculatorButtonLine from "../components/CalculatorButtonLine";
+import CalculatorScreen from "../components/CalculatorScreen";
+import CalculatorSignal from "../components/CalculatorSignal";
+import Main from "../components/Main";
+import ParticlesBackground from "../components/ParticlesBackground";
+import TextBox from "../components/TextBox";
+import Title from "../components/Title";
+import TitleSmall from "../components/TitleSmall";
+
 import { useState } from "react";
 
 export default function index() {
   const [result, setResult] = useState("");
   return (
     <div>
-      <Component.ParticlesBackground />
-      <Component.Main>
-        <Component.TextBox>
-          <Component.Title>Seja Bem-Vindo ao NextCalculator!</Component.Title>
-          <Component.TitleSmall>
+      <ParticlesBackground />
+      <Main>
+        <TextBox>
+          <Title>Seja Bem-Vindo ao NextCalculator!</Title>
+          <TitleSmall>
             Uma calculadora feita totalmente em Javascript, utilizando React e
             NextJS
-          </Component.TitleSmall>
-        </Component.TextBox>
-        <Component.CalculatorBox>
-          <Component.CalculatorScreen value={result} readOnly />
-          <Component.CalculatorButtonLine>
-            <Component.CalculatorSignal
+          </TitleSmall>
+        </TextBox>
+        <CalculatorBox>
+          <CalculatorScreen value={result} readOnly />
+          <CalculatorButtonLine>
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "(");
               }}
             >
               (
-            </Component.CalculatorSignal>
+            </CalculatorSignal>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + ")");
               }}
             >
               )
-            </Component.CalculatorSignal>
+            </CalculatorSignal>
 
-            <Component.CalculatorSignal> CE </Component.CalculatorSignal>
+            <CalculatorSignal> CE </CalculatorSignal>
 
-            <Component.CalculatorSignal onClick={(e) => setResult("")}>
+            <CalculatorSignal onClick={(e) => setResult("")}>
               C
-            </Component.CalculatorSignal>
-          </Component.CalculatorButtonLine>
-          <Component.CalculatorButtonLine>
-            <Component.CalculatorButton
+            </CalculatorSignal>
+          </CalculatorButtonLine>
+          <CalculatorButtonLine>
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "7");
               }}
             >
               7
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "8");
               }}
             >
               8
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "9");
               }}
             >
               9
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "÷");
               }}
             >
               ÷
-            </Component.CalculatorSignal>
-          </Component.CalculatorButtonLine>
-          <Component.CalculatorButtonLine>
-            <Component.CalculatorButton
+            </CalculatorSignal>
+          </CalculatorButtonLine>
+          <CalculatorButtonLine>
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "4");
               }}
             >
               4
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "5");
               }}
             >
               5
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "6");
               }}
             >
               6
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "x");
               }}
             >
               x
-            </Component.CalculatorSignal>
-          </Component.CalculatorButtonLine>
-          <Component.CalculatorButtonLine>
-            <Component.CalculatorButton
+            </CalculatorSignal>
+          </CalculatorButtonLine>
+          <CalculatorButtonLine>
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "1");
               }}
             >
               1
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "2");
               }}
             >
               2
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorButton
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "3");
               }}
             >
               3
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "-");
               }}
             >
               -
-            </Component.CalculatorSignal>
-          </Component.CalculatorButtonLine>
-          <Component.CalculatorButtonLine>
-            <Component.CalculatorButton
+            </CalculatorSignal>
+          </CalculatorButtonLine>
+          <CalculatorButtonLine>
+            <CalculatorButton
               onClick={(e) => {
                 setResult(result + "0");
               }}
             >
               0
-            </Component.CalculatorButton>
+            </CalculatorButton>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + ".");
               }}
             >
               .
-            </Component.CalculatorSignal>
+            </CalculatorSignal>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "=");
               }}
             >
               =
-            </Component.CalculatorSignal>
+            </CalculatorSignal>
 
-            <Component.CalculatorSignal
+            <CalculatorSignal
               onClick={(e) => {
                 setResult(result + "+");
               }}
             >
               +
-            </Component.CalculatorSignal>
-          </Component.CalculatorButtonLine>
-        </Component.CalculatorBox>
-      </Component.Main>
+            </CalculatorSignal>
+          </CalculatorButtonLine>
+        </CalculatorBox>
+      </Main>
     </div>
   );
 }
