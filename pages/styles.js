@@ -155,7 +155,7 @@ const params = {
   },
 };
 
-export const ParticlesBackground = styled(Particles).attrs((props) => ({
+export const ParticlesBackground = styled(Particles).attrs(() => ({
   params: params,
 }))`
   position: absolute;

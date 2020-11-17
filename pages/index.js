@@ -10,13 +10,11 @@ export default function index() {
       <Component.GlobalStyle />
       <Component.Main>
         <Component.TextBox>
-          <Component.Title>
-            Seja Bem-Vindo ao NextCalculator!
-            <Component.TitleSmall>
-              Uma calculadora feita totalmente em Javascript, utilizando React e
-              NextJS
-            </Component.TitleSmall>
-          </Component.Title>
+          <Component.Title>Seja Bem-Vindo ao NextCalculator!</Component.Title>
+          <Component.TitleSmall>
+            Uma calculadora feita totalmente em Javascript, utilizando React e
+            NextJS
+          </Component.TitleSmall>
         </Component.TextBox>
         <Component.CalculatorBox>
           <Component.CalculatorScreen value={result} readOnly />
