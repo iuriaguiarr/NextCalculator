@@ -1,23 +1,5 @@
 import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
-
-// Interagindo diretamente com a tag body
-export const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: #4ecdc4;
-    overflow:hidden;
-  }
-  *{
-    outline: none;
-    border: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-`;
+import Particles from "react-particles-js";
 
 export const Main = styled.main`
   display: flex;
@@ -100,4 +82,65 @@ export const CalculatorSignal = styled(CalculatorButton)`
   &:hover {
     background-color: #1c1f21;
   }
+`;
+
+const params = {
+  particles: {
+    number: {
+      value: 160,
+      density: {
+        enable: false,
+      },
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        speed: 4,
+        size_min: 0.3,
+      },
+    },
+    line_linked: {
+      enable: false,
+    },
+    move: {
+      random: true,
+      speed: 0.5,
+      direction: "top",
+      out_mode: "out",
+    },
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubble",
+      },
+      onclick: {
+        enable: true,
+        mode: "repulse",
+      },
+    },
+    modes: {
+      bubble: {
+        distance: 250,
+        duration: 2,
+        size: 0,
+        opacity: 0,
+      },
+      repulse: {
+        distance: 400,
+        duration: 4,
+      },
+    },
+  },
+};
+
+export const ParticlesBackground = styled(Particles).attrs(() => ({
+  params: params,
+}))`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 `;

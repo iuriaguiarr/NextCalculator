@@ -5,7 +5,7 @@ export default function index() {
   const [result, setResult] = useState("");
   return (
     <div>
-      <Component.GlobalStyle />
+      <Component.ParticlesBackground />
       <Component.Main>
         <Component.TextBox>
           <Component.Title>Seja Bem-Vindo ao NextCalculator!</Component.Title>

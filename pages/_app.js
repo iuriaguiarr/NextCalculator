@@ -31,6 +31,19 @@ export default class MyApp extends App {
         <style global jsx>{`
           body {
             font-family: "Cabin", sans-serif;
+            background-color: #4ecdc4;
+            overflow: hidden;
+          }
+
+          * {
+            outline: none;
+            border: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
           }
         `}</style>
       </>
